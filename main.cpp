@@ -19,6 +19,22 @@ int main()
 	}
 	cout << endl;
 
+	g.set_state(1);
+	int m = g.get_state(0);
+	cout << m << endl;
+	g.set_state(0,0);
+	m = g.get_state(0);
+	cout << m << endl;
+
+	list<int> f = g.get_adj_state(2);
+	cout << "States of vertices connected to vertex 2 are ";
+	for (listiter = f.begin(); listiter != f.end(); listiter++)
+	{
+		cout << *listiter << '\t';
+	}
+	cout << endl;
+
+
 
 	return 0;
 
